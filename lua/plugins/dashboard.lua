@@ -1,6 +1,6 @@
 return {
   {
-    "nvimdev/dashboard-nvim",
+    "snacks.nvim",
     opts = function(_, opts)
       local logo = [[
 	    ███╗   ██╗███████╗ ██████╗ ██╗   ██╗██╗███╗   ███╗
@@ -12,8 +12,8 @@ return {
 
 	    [ Aman9das ]
       ]]
-      logo = string.rep("\n", 8) .. logo .. "\n\n"
-      opts.config.header = vim.split(logo, "\n")
+      -- logo = string.rep("\n", 8) .. logo .. "\n\n"
+      opts.dashboard.preset.header = logo
     end,
   },
 }

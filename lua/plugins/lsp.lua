@@ -78,6 +78,19 @@ return {
         "regex",
         "tsx",
         "nix",
+        "kdl",
+      },
+    },
+  },
+
+  {
+    "folke/ts-comments.nvim",
+    opts = {
+      lang = {
+        kdl = {
+          "// %s",
+          -- "/- %s -/",
+        },
       },
     },
   },
