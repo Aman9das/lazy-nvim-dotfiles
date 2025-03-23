@@ -4,13 +4,14 @@ return {
     opts = {
       formatters_by_ft = {
         -- r formatter
-        ["markdown"] = { "mdformat" },
-        ["markdown.mdx"] = { "mdformat" },
-        ["quarto"] = { "mdformat" },
-        ["rmd"] = { "mdformat" },
-        ["r"] = { "mystyler" },
+        ["markdown"] = { "prettierd" },
+        ["markdown.mdx"] = { "prettierd" },
+        ["quarto"] = { "prettierd", "markdownlint-cli2", "markdown-toc" },
+        ["rmd"] = { "prettierd", "markdownlint-cli2", "markdown-toc" },
+        ["r"] = { "styler" },
         ["*"] = { "trim_whitespace", "trim_newlines" },
       },
+      timeout_ms = nil,
       formatters = {
         prettier = {
           options = {
@@ -57,7 +58,7 @@ return {
             -- Map of treesitter language to formatters to use
             -- (defaults to the value from formatters_by_ft)
             lang_to_formatters = {
-              ["r"] = { "mystyler" },
+              -- ["r"] = { "mystyler" },
             },
           },
         },
